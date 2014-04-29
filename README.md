@@ -111,3 +111,11 @@ Commit the following to `app/models/contact.rb`
 ```
 self.table_name = 'salesforce.contact'
 ```
+
+### Set a root route
+
+Commit the following to `config/routes.rb`
+
+```
+root 'contacts#index'
+```
