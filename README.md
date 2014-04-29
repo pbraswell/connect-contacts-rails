@@ -49,3 +49,21 @@ Salesforce instance.
 Select `Read/Write` above the mapped objects list.
 
 ![Read/Write Toggle](read-write.png)
+
+## Rails Setup
+
+### Create a new Rails app
+
+Run this command in your your_heroku_app_name directory. The new app will be
+configured to use Postgres.
+
+```
+$ rails new . -d postgresql
+```
+
+### Commit the app to git and deploy it to Heroku
+
+```
+$ git commit -am "New Rails app"
+$ git push heroku master
+```
