@@ -93,6 +93,13 @@ $ heroku config:set AUTH_NAME=your_name AUTH_PASSWORD=your_super_secure_password
 
 ### Scaffold the Contact
 
+Use Rails' scaffolding to create a `Contact` model. Delete the migration file
+and commit the generated files as shown below.
+
 ```
 $ rails g scaffold Contact email firstname lastname phone title
+$ rm db/migrate/XXXXXXXXXXXXXX_create_contacts.rb
+$ git add config
+$ git add app
+$ git commit -m "Create Contact Object"
 ```
