@@ -71,7 +71,7 @@ $ git push heroku master
 
 ### Secure the app
 
-Add the following to `app/controllers/application_controller.rb`.
+Commit the following to `app/controllers/application_controller.rb`.
 
 ```
 force_ssl if: :ssl_configured?
@@ -83,4 +83,16 @@ http_basic_authenticate_with name: auth_name, password: auth_password
 def ssl_configured?
   !Rails.env.development?
 end
+```
+
+Set a username and password on Heroku.
+
+```
+$ heroku config:set AUTH_NAME=your_name AUTH_PASSWORD=your_super_secure_password
+```
+
+### Scaffold the Contact
+
+```
+$ rails g scaffold Contact email firstname lastname phone title
 ```
