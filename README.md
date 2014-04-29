@@ -64,6 +64,7 @@ $ rails new . -d postgresql
 ### Commit the app to git and deploy it to Heroku
 
 ```
-$ git commit -am "New Rails app"
+$ git add .
+$ git commit -m "New Rails app"
 $ git push heroku master
 ```
