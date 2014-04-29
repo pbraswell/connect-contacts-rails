@@ -101,5 +101,13 @@ $ rails g scaffold Contact email firstname lastname phone title
 $ rm db/migrate/XXXXXXXXXXXXXX_create_contacts.rb
 $ git add config
 $ git add app
-$ git commit -m "Create Contact Object"
+$ git commit -m "Create Contact Model"
+```
+
+### Configure the Contact
+
+Commit the following to `app/models/contact.rb`
+
+```
+self.table_name = 'salesforce.contact'
 ```
