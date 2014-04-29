@@ -68,3 +68,19 @@ $ git add .
 $ git commit -m "New Rails app"
 $ git push heroku master
 ```
+
+### Secure the app
+
+Add the following to `app/controllers/application_controller.rb`.
+
+```
+force_ssl if: :ssl_configured?
+
+auth_name = ENV['AUTH_NAME'] || 'name'
+auth_password = ENV['AUTH_PASSWORD'] || SecureRandom.hex
+http_basic_authenticate_with name: auth_name, password: auth_password
+
+def ssl_configured?
+  !Rails.env.development?
+end
+```
