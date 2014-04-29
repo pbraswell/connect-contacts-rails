@@ -119,3 +119,10 @@ Commit the following to `config/routes.rb`
 ```
 root 'contacts#index'
 ```
+
+### Push to Heroku and try your app
+
+```
+$ git push heroku master
+$ heroku open
+```
